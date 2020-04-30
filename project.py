@@ -13,8 +13,8 @@ def y(point,i,color):
 
 dataset=pd.read_csv('countries.csv')
 test=folium.Map(location=[0.00,0.00], zoom_start=1)
-places=dataset[['latitude','longitude']]
-place=places.values.tolist()
+coor=dataset[['latitude','longitude']]
+place=coor.values.tolist()
 i=0
 for point in place:
     if dataset['confirmed'][i]>50000:
